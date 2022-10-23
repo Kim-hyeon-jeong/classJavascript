@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //정규표현식, 표현식(규칙)
+        //1. 리터럴 방식
+        var pattern1 = /a/;//a가 문자열에 들어가 있느냐
+
+        //2. 객체 생성 방식
+        var pattern2 = new RegExp("a"); //b가 문자열에 들어가 있느냐
+
+        var pattern3 = /k/i; //대소문자 구분없이 k가 문자열에 들어가 있느냐
+
+        //문자열 만들기
+        var str1 = "hi~ javascript~~ byebye!!!";
+        var str2 = "bee ~~~";
+        var str3 = "King of King";
+
+        //str1이 pattern1의 형식에 맞는지 테스트 하기 exec
+        console.log(pattern1.exec(str1)); //인덱스 5번에 a 존재 ['a', index: 5, ~~~]
+        //str2이 pattern1형식 맞는지
+        console.log(pattern1.exec(str2)); //null (a가 문자열에 없다)
+
+        console.log(pattern2.test(str1)); //true a가 있다
+        console.log(pattern2.test(str2)); //false a가 없다
+
+        console.log(pattern3.test(str3));//true k가 있다 . 만약 패턴3에 i없으면 false 소문자 k없음
+
+    </script>
+</head>
+<body>
+    <h1>정규표현식</h1>
+    <p>exec</p>
+    <p>test</p>
+    
+</body>
+</html>

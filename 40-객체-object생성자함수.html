@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //TV객체 생성하기(옜날방식) 리액트방식이 최신
+        var TV = new Object();
+        
+        //TV 객체 속성 만들기
+        TV.brand = "LG"; //속성에 값을 줄수도 선언만 할수도있다
+        TV.inch;
+        TV.flat;
+        
+        //TV 메서드 만들기
+        TV.on = function(){
+            alert("tv가 켜졌어요~~~")
+        }
+        TV.off = function(){
+            alert("tv가 꺼졌어요~~~")
+        }
+        TV.volumn = function(num){
+            alert("볼륨이" + num + "으로 변경")
+        }
+        console.log(TV.brand);
+        TV.volumn(30);
+    </script>
+</head>
+<body>
+    TV 객체
+    특징들 - 속성 : lg, inch65, flat 
+    동작 - 메서드 : on(), off(), changeChannel(10), changeChannel("ocn"), volumn("up"); 
+    <!-- 괄호안에 빈칸일수도, 숫자, 문자 일수도 있다 -->
+    <!-- function도 메서드의 일종(동작) : 괄호가 있다 -->
+</body>
+</html>

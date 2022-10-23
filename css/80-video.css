@@ -1,0 +1,35 @@
+.videoWrap{
+    width:800px;
+    margin:0 auto;
+}
+.videoWrap video{
+    width:100%;
+}
+.controlBtn{
+    display: flex;
+}
+.controlBtn>li{
+    margin:10px;
+}
+.controlBtn>li>a{
+    display: block;
+    width:24px;
+    height:24px;
+    border:1px solid black;
+    padding:10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -9999px;
+}
+.controlBtn>li>.playPause{
+    background-image: url(../images/btn-play.png);
+}
+.controlBtn>li>.stop{
+    background-image: url(../images/btn-stop.png);
+}
+.controlBtn>li>.prev{
+    background-image: url(../images/btn-back.png);
+}
+.controlBtn>li>.next{
+    background-image: url(../images/btn-reward.png);
+}

@@ -1,0 +1,23 @@
+table,th,td{
+    border : 1px solid #ccc;
+
+}
+.calWrap{
+    width:500px;
+    margin: 50px auto;
+    text-align: center;
+    background-color: #eee;
+}
+
+.btn{
+    display: flex;
+    justify-content: space-between;
+}
+.calender{
+    width:100%;
+}
+.calender span{
+    display: block;
+    background-color: hotpink;
+    color:white;
+}

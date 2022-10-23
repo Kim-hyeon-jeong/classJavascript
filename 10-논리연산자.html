@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //변수4개 선언하기
+        var num1=10;
+        var num2=5;
+        var num3=3;
+        var str=true;
+        console.log(!str); //false
+        //num1<num2 num2<num3 false && false => false
+        console.log(num1<num2 && num2<num3);
+        //num1<num2 num2>num3 false && true => false
+        console.log(num1<num2 && num2>num3);
+        //num1>num2 num2<num3 true && false => false
+        console.log(num1>num2 && num2<num3);
+        //num1>num2 num2>num3 true && true => true
+        console.log(num1>num2 && num2>num3);
+
+        // ||
+        //num1>num2 || num2>num3 true || true =>true
+        console.log(num1>num2 || num2>num3);
+        //num1>num2 || num2<num3 true false =>true
+        console.log(num1>num2 || num2<num3);
+        //num1<num2 || num2<num3 false false => false
+        console.log(num1<num2 || num2<num3);
+
+    </script>
+</head>
+<body>
+    <h1>논리연산자</h1>
+    <p> && 앞뒤 조건이 둘다 만족했을때만 true</p>
+    <p> || 앞뒤 조건이 둘다 false일때만 false</p>
+</body>
+</html>

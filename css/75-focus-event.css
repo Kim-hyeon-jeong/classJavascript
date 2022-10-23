@@ -1,0 +1,36 @@
+form{
+    width:600px;
+    margin:100px auto;
+    font-size: 20px;
+}
+p{
+    position:relative;
+}
+
+input {
+    border: 1px solid #ccc;
+    background: #eee;
+    line-height: 50px;
+    border-radius: 50px;
+    width:100%;
+    padding:0 20px;
+    box-sizing: border-box;
+    font-size: 20px;
+    caret-color:#1b52ed;
+   
+}
+button{
+    width:100%;
+    line-height: 50px;
+    border-radius: 50px;
+    background: #1b52ed;
+    border: 1px solid #1b52ed;
+    color:white;
+    font-size: 20px;
+}
+label{
+    position:absolute;
+    top:10px;
+    left:20px;
+    color:#aaa;
+}

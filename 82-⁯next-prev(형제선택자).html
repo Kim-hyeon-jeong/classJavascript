@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active{background-color: darkgreen;color:white;}
+        .font{font-size: 30px; color:skyblue;}
+        .bg{background: pink;}
+    </style>
+    <script>
+        window.onload=function(){
+            //title1 바로 다음에 오는 형제를 선택하여 active클래스 추가하기
+            var title1= document.querySelector(".title1");
+            var next = title1.nextElementSibling;
+            next.classList.add("active");
+            //menu를 선택하여 menu바로 앞에오는 형제 on
+            var menu= document.querySelector(".menu");
+            var prev=menu.previousElementSibling;
+            prev.classList.add("bg");
+            //.menu>li
+            var link = document.querySelectorAll(".menu>li"); //li 모두 선택하기위해
+            console.log(link); //NodeList(5) [li, li, li, li, li] 배열로 저장되므로 for문씀
+            for(i=0; i<link.length; i++){
+                link[i].classList.add("font");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 class="title1">형제 선택자 next</h1>
+    <ul>
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        <li>list4</li>
+        <li>list5</li>
+    </ul>
+    <h1 class="title2">형제 선택자 prev</h1>
+    <ul class="menu">
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+        <li>menu5</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,33 @@
+/* 모든홈피 공통사항 */
+/* 기본여백제거 */
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color:#222;
+}
+.blind{
+    position:absolute;
+    top:-99999px;
+}
+img{
+    vertical-align: top;
+}
+address,i,em{
+    font-style: normal;
+}
+.clearFix::after{
+    content:"";
+    display: block;
+    clear:both;
+}
+body{
+    font-family: '돋움',dotum, sans-serif;
+    font-size: 15px;
+    color:#222;
+}

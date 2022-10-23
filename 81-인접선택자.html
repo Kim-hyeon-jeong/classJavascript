@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active{
+            background-color: dodgerblue;
+            color:white;
+        }
+        .bg{
+            background-color: pink;
+        }
+    </style>
+    <script>
+        window.onload= function(){
+            var title = document.querySelector("h1");//직접선택자-태그를 직접선택
+            // console.log(title.nextElementSibling); -><ul id="list">
+            // 마크업에서 알고있던 형제
+            var next = title.nextElementSibling;
+            //닫는태그 다음에 오는 엔터 혹은 공백들을 선택
+            console.log(title.nextSibling); // 엔터먼저 나타남 #text
+            next.classList.add("active");
+
+            var menu = document.querySelector("#menu>li"); //첫번째 li요소에게만 적용이된다(혼자 핑크배경)
+            //#menu>li>a라고 써도 되지만 알아둬야함
+            menu.classList.add("bg");
+            console.log(menu); //<li class="bg">
+            //menu의 자식요소
+            // var child = menu.childNodes; 
+            // NodeList [a] :자식요소 a
+            // console.log(child); 
+            var child = menu.children;
+            //HTMLCollection [a] : html구조상 자식요소 a
+            console.log(child);
+        }
+    </script>
+</head>
+<body>
+    <h1>인접선택자</h1>
+    <ul id="list">
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+    </ul>
+    <ul id="menu">
+        <li><a href="#">menu1</a></li>  
+        <li>menu2</li>
+        <li>menu3</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //주민등록번호 체크하기
+        var p1 = /\d{6}-[1-4]\d{6}/
+
+        //전화번호 체크하기
+        var tel = /^0\d{1,2}-?\d{3,4}-?\d{3,4}/
+
+        //핸드폰번호 체크하기 ?: 앞의 문자가 있거나(하나만) 없거나
+        var phone = /^01([0|1|6|7|8|9])-?\d{3,4}-?\d{4}/
+
+        //이메일 체크하기
+        //시작이 숫자이거나, 영문자(대소문자)이고 중간에는 [~,!,@,#,$] 있을수도 없을수도
+        //?는 앞에 있거나(하나) 없거나 *는 앞에 한개이상 있거나 없거나
+        //그리고 영문자 숫자가 오고 @나오고, 영문자 .영문자{2,3}
+
+        var email = /^[0-9a-zA-Z]([~!@#$]?[0-9a-zA-Z])*@[a-zA-Z].*.[a-zA-Z]{2,3}$/
+
+        var num = prompt("당신의 주민등록번호를 입력하세요","123456-1234567");
+        console.log(p1.test(num));
+
+        var myTel = prompt("당신의 전화번호를 입력하세요","");
+        console.log(tel.test(myTel));
+
+        var phoneTel =  prompt("당신의 폰번호를 입력하세요","");
+        console.log(phone.test(phoneTel));
+
+        var myEmail = prompt("당신의 이메일을 입력하세요","");
+        console.log(email.test(myEmail));
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

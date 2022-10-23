@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //사이트입력받기
+        var site = prompt("네이버, 다음, 구글 중 즐겨찾는 사이트를 입력하세요","예)네이버 다음 구글");
+
+        //주소를 저장할 변수
+        var url;
+
+        switch(site){
+            case "네이버" :
+                url="http://naver.com";
+                break;
+            case "다음" :
+                url="http://daum.net";
+                break;
+            case "구글" :
+                url="http://google.com";
+                break;
+            default :
+            alert("네이버, 다음, 구글만 됩니다.");
+        }
+        document.write(url);
+        //값이 존재할때 (조건문에 변수만 있을때)
+        if(url){
+            location.href=url; //브라우저 연결주소
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //선언적 함수(옛날방식)이다. 최근에는 익명함수방식
+        //사용자로부터 두개의 과목 점수를 입력받아서 평균을 구해주는 함수를 통해 계산한 후 평균을 출력하도록
+        //평균을 구하는 함수 만들기
+        function avg(pui, pdesign){
+            var result = (pui + pdesign)/2;
+            return result; //지역변수를 밖에 함수와 연결된 변수로 보내주는 역할
+        }
+        var ui = Number(prompt("당신의 ui점수를 입력하세요",""));
+        var design = Number(prompt("당신의 design점수를 입력하세요", ""));
+
+        var avgData= avg(ui,design);
+        document.write(avgData);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

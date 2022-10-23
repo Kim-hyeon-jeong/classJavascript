@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //ui구현 ui테스트 ui디자인
+        var uiDesign=Number(prompt("당신의 ui디자인 점수를 입력하세요",""));
+        var uiTest=Number(prompt("당신의 ui테스트 점수를 입력하세요",""));
+        var ui = Number(prompt("당신의 ui구현 점수를 입력하세요",""));
+
+        var avg= (uiDesign+uiTest+ui)/3;
+        if(avg<60){
+            console.log("불합격");
+        }else{
+            if(uiDesign>=40 && uiTest>=40 && ui>=40){
+                console.log("합격");
+            }else{
+                console.log("과락 불합격");
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>3과목 점수를 입력받아서 평균이 60점 미만이면 불합격이고</p>
+    <p>60 이상이면 과락이 있는지 체크하여 과락없으면 합격, 과락있으면 불합격</p>
+    
+</body>
+</html>

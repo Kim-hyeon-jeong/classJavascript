@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width:200px;
+            height:100px;
+            border:1px solid black;
+        }
+        .bg{
+            background:pink;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var addBtn = document.querySelector(".addBtn");
+            var removeBtn = document.querySelector(".removeBtn");
+            var box = document.querySelector(".box");
+
+            //addBtn을 클릭하면 box에 bg클래스가 추가되도록
+            addBtn.addEventListener("click",function(){
+                box.classList.add("bg");
+            })
+            
+            //removeBtn을 클릭하면 box에 적용된 bg class가 제거되도록
+            removeBtn.addEventListener("click",function(){
+                box.classList.remove("bg");
+            })
+        }
+    </script>
+</head>
+<body>
+    <div class="box">box</div>
+    <button class="addBtn">추가</button>
+    <button class="removeBtn">제거</button>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //익명함수
+        var colorBg = function(color){
+            console.log(color);
+            document.querySelector("body").style.backgroundColor=color;
+            // body 태그를 선택하는 선택자
+        }
+    </script>
+</head>
+<body>
+    <!-- '매개변수'를 콘솔에 출력하라는 함수 -->
+    <!-- 버튼 작동은 이벤트라고함 -->
+    <button onclick="colorBg('pink')">pink</button>
+    <button onclick="colorBg('skyblue')">skyblue</button>
+    <!-- 바깥에 쌍따옴표이면 안쪽은 외따옴표쓰기 -->
+    <button onclick="colorBg('#ccc')">#ccc</button>
+    <button  onclick="colorBg('green')">green</button>
+</body>
+</html>

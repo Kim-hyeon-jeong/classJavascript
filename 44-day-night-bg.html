@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-size: 100%;
+        }
+    </style>
+    
+</head>
+<body>
+    <!-- 함수로 만들면 head안에 script써도 되지만 함수아니면 body에 script적거나 head에 적더라도 뭘 더 써줘야함 -->
+    <script>
+        //날짜 정보 얻어오기
+        var date= new Date();
+
+        //시간
+        var hours = Number(date.getHours());
+        console.log(hours)
+        if(hours>=6 && hours<=19){
+            document.querySelector("body").style.backgroundImage="url(images/day.jpg)"
+        }
+        else{
+            document.querySelector("body").style.backgroundImage="url(images/night.jpg)"
+        }
+    </script>   
+</body>
+</html>

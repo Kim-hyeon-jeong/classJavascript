@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //특정 날짜 정보 얻어오기
+        // 2022.09.05
+        var dDay = new Date(2022,8,5);
+        console.log(dDay);
+
+        //오늘의 날짜
+        var today = new Date();
+        var diff = dDay - today;
+        console.log(diff/(24*60*60*1000)); //밀리초로 나타난다
+        //하루는 24시간 
+        //하루는 24*60분
+        //하루는 24*60*60초
+        //하루는 24*60*60*1000 (밀리초)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

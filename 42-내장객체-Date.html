@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //오늘의 날짜와 관련된 정보 얻어오기
+        //객체 첫글자 대문자, 선언시 new붙여주기
+        var today = new Date();
+        console.log(today);
+
+        //년도
+        var year = today.getFullYear(); //메서드
+        console.log(year);
+        //월
+        var month = today.getMonth();
+        console.log(month); //-1
+        //일
+        var theDate = today.getDate();
+        console.log(theDate);
+        //요일
+        var day = today.getDay();
+        console.log(day) // 0 일 1 월 2 화 3 수 4 목 
+        //시간
+        var hours = today.getHours();
+        if(hours>=12){
+            console.log("오후 : " + (hours-12));
+        }
+        else{
+            console.log("오전 : " + hours);
+        }
+        //분
+        var m = today.getMinutes();
+        console.log(m);
+        //초
+        var seconds = today.getSeconds();
+        console.log(seconds);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

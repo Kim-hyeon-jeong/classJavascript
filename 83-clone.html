@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+            var menu=document.querySelector(".menu");
+            //첫번째 자식요소
+            var first = menu.firstElementChild.cloneNode(true);//()를 비워두면 false라서 복붙시 빈칸이된다
+
+            console.log(first); //첫번째 li
+            menu.appendChild(first);//마지막자식으로 복사한걸 붙이기 (첫번째자식으로 붙이려면 preppendChild)
+        }
+    </script>
+</head>
+<body>
+    <ul class="menu">                               
+        <li><a href="#">list1</a></li>
+        <li><a href="#">list2</a></li>
+        <li><a href="#">list3</a></li>
+    </ul>
+</body>
+</html>

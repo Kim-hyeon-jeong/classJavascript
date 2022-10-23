@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/75-focus-event.css">
+    <script>
+        window.onload=function(){
+            //#uId에 포커스가 들어가면 .uId라벨이 사라지고, 배경은 흰색되도록
+            var uId=document.querySelector("#uId");
+            var uIdLabel = document.querySelector(".uId");
+            //uId.onfocus=function(e){}
+            uId.addEventListener("focus",function(e){
+                console.log(e);
+                uIdLabel.style.display="none";
+                //이벤트를 준 자기자신에게 흰배경 주도록 (uId 대신 this라고)
+                this.style.backgroundColor="white";
+            })
+
+            uId.addEventListener("blur",function(){
+                uIdLabel.style.display="block";
+                this.style.backgroundColor="#eee";
+            })
+        }
+    </script>
+</head>
+<body>
+    <form action=""name="member">
+        <p><input type="text" id="uId"><label for="uId" class="uId">아이디 입력</label></p>
+        <p><input type="text" id="uPass"><label for="uPass" class="uPass">비밀번호 입력</label></p>
+        <p><button>로그인</button></p>
+    </form>
+</body>
+</html>

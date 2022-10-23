@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //숫자만 있는 패턴(시작과 끝 모두 숫자면 조건만족)
+        var p1 = /^[0-9]*$/
+        //*을 안써주면 안된다 ($앞에는 무조건 갯수를 나타내는 ?,.,*이 붙어야 한다.)
+
+        //영문자만 있는 패턴 영문자로 시작하되 끝문자가(* : 바로 앞 문자가 없거나 하나이상)없거나 영문자 하나이상
+        var p2 = /^[a-zA-Z]*$/
+
+        //한글만 있는 패턴
+        var p3 = /^[가-힣]*$/
+
+        //숫자로 시작하고 시작숫자가 2글자 또는 3글자
+        //p4 = /^\d{2,3}/ 과 동일하다
+        var p4 = /^[0-9]{2,3}/
+
+        var str1 = "javascript";
+        var str2 = "0101111111";
+        var str3 = "119소방소 911";
+        var str4 = "안녕하세요월요일입니다";
+        var str5 = "tel-010-222-2222";
+        var str6 = "011-333-444"
+
+        console.log(p1.test(str1)); //false 숫자없음
+        console.log(p1.test(str2)); //false '-' 문자가 있음
+        console.log(p1.test(str3));//false 중간에 문자가 있음
+
+        console.log(p2.test(str1)); //true 영문자만 있음
+        console.log(p2.test(str5));//false 숫자가 포함되어있음
+
+        console.log(p3.test(str3));//false 숫자가 포함됨
+        console.log(p3.test(str4));//true 모두 한글임 (띄어쓰기도없어야함)
+
+        console.log(p4.test(str2));//true
+        console.log(p4.test(str3));//true
+        console.log(p4.test(str6));//true
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
