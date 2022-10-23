@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //윈도우의 내용이 다 불려지면 실행해라~
+        window.onload = function(){
+            //이미지 태그 생성하기
+            var myImg = document.createElement("img");
+
+            //이미지 태그에 속성 생성하기(2가지 방식)
+            // myImg.src="images/logo_w.png";
+            // myImg.alt="써브웨이로고";
+
+            myImg.setAttribute("src","images/logo_w.png");
+            //최근에 이방식을 많이 씀
+            myImg.setAttribute("alt","subway logo");
+
+
+            //body에 이미지 태그를 자식으로 추가하기
+            document.body.appendChild(myImg);
+
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

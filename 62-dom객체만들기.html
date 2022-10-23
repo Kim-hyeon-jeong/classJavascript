@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //h1태그를 생성하고 그 안에 내용으로 "dom객체"라고 넣고
+        //h1을 body 안에 넣기
+        //프로그램은 위에서 부터 실행되기 때문에 body를 읽을 수가 없다, body를 선택하려면 모든 내용이 다 불려진
+        //다음에 실행해야함
+        //스크립트를 이용해 dom구조를 만들수있다
+        window.onload = function(){
+            //h1태그 생성하기
+            var hTitle = document.createElement("h1");
+            
+            //태그에 들어갈 내용물 생성하기
+            var hText = document.createTextNode("dom객체");
+            
+            //생성된 태그에 생성된 내용물 넣기
+            hTitle.appendChild(hText);
+
+            //body의 자식으로 hTitle 넣기
+            document.body.appendChild(hTitle);
+        }
+    </script>
+</head>
+<body>
+    <!-- h1태그 생성하기 -->
+    
+</body>
+</html>

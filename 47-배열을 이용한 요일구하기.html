@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //날짜
+        var date = new Date();
+
+        //요일의 정보를 저장할 배열
+        var week = ["일","월","화","수","목","금","토"];
+
+        var day = date.getDay(); //0~6
+        console.log(day);//3 수요일
+        document.write("오늘은" + week[day] + "요일입니다");
+
+        //자바스크립트 2에서(제이쿼리이후) 배열의 중요사항 배울것이다
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    //Number객체 또한 new연산자 없이 쓸수있다.
+    var num1="15.54321";
+    var num2="3.14157";
+    var num3=176.353535;
+    var num4="seoul2022";
+    //문자를 숫자로 변경
+    //Number
+    //parseInt -정수형 숫자로 변경
+    //parseFloat -실수형 숫자로 변경
+    //num1+10
+    document.write(Number(num1)+10,"<br>");
+    document.write(parseInt(num1)+10,"<br>");
+    //num2+10
+    document.write(parseFloat(num2)+10,"<br>");
+    
+    //num4+10 문자가 섞여있어 판독 안됨
+    document.write(Number(num4)+10,"<br>");
+    document.write(parseInt(num4) +10,"<br>");
+    //소수점 처리하기
+    //num3 소수점 2째자리까지
+    document.write(num3.toFixed(2),"<br>");//소수점 2자리까지
+    document.write(num3.toPrecision(5),"<br>");//전체자리수
+
+    //isNaN 숫자가 아니냐?
+    document.write(isNaN(num1),"<br>"); //숫자다..  =>??1시 10분쯤
+    document.write(isNaN(num3),"<br>"); //숫자다
+    document.write(isNaN(num4),"<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myDigit(){
+            //오늘의 날짜 정보를 저장할 변수
+            var today = new Date();
+
+            //시간
+            var hours = today.getHours();
+
+            //분
+            var m = today.getMinutes();
+
+            //초
+            var s = today.getSeconds();
+
+            //myClock 안에 시 분 초
+            var mytime = document.querySelector("#myClock");
+            mytime.innerHTML = hours + "시" + m + "분" + s + "초";
+        }
+
+        setInterval("myDigit()",1000);//1초간격으로 함수반복실행
+    </script>
+</head>
+<body onload="myDigit();"> 
+    <!-- 전부 불러온뒤에 함수를 호출한다 window.onload와 같다 (body에 onload쓰기) -->
+    <div id="myClock"></div>
+    
+</body>
+</html>

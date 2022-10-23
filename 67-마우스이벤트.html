@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height:1000px; 
+            /* 마우스오버때문에 줬다는데 이유는 모름 */
+        }
+    </style>
+    <script>
+        //1. 태그에 이벤트 주는 방식
+        //배경색 변경하는 함수 만들기
+        function bg(){
+            //body선택
+            var myBody=document.querySelector("body");
+            //색상주기
+            myBody.style["background-color"]="pink";
+        }
+        
+        //2.
+        window.onload=function(){
+            var btn2 = document.querySelector(".btn2");
+            var btn3 = document.querySelector(".btn3");
+            var btn4 = document.querySelector(".btn4");
+            var btn5 = document.querySelector(".btn5");
+            var btn6 = document.querySelector(".btn6");
+
+            var myBody = document.querySelector("body");
+
+            //btn2 더블클릭하면 배경을 skyblue
+            //선택자.이벤트종류 = function(){
+            //     할일;
+            // }
+            btn2.ondblclick = function(){
+                myBody.style["background-color"]="skyblue";
+            }
+            btn3.onmouseover = function(){
+                myBody.style.backgroundColor="green";
+            }
+            btn4.onmouseout = function(){
+                myBody.style.backgroundColor="orange";
+            }
+            btn5.onmousedown = function(){
+                myBody.style.backgroundColor="beige";
+            }
+            btn6.addEventListener("mouseup",function(){
+                myBody.style.backgroundColor="#ddd";
+            })
+            //이벤트가 발생해야 호출되는 함수 : 이벤트함수
+            myBody.addEventListener("mousemove",function(e){ //이벤트함수의 매개변수 e(event약자)
+            //  console.log(e);
+                console.log(e.type);
+                console.log(e.clientX,e.clientY);
+                console.log(e.target);
+            });
+            //콘솔에 마우스오버/ 좌표값/ 타겟인 바디가 나타남
+        }
+    </script>
+</head>
+<body>
+    <button class="btn1" onclick="bg()">click</button> 
+    <button class="btn2">dbclick</button>
+    <button class="btn3">mouse over</button>
+    <button class="btn4">mouse out</button>
+    <button class="btn5">mouse down</button>
+    <button class="btn6">mouse up</button>
+    <button class="btn7">mouse move</button>
+</body>
+</html>

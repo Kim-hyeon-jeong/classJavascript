@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var str="hi~ javascript! Welcome~~~";
+        document.write(str,"<br>");
+        //특정위치의 문자 하나 추출하기 charAt()
+        document.write("5번째문자: "+str.charAt(5),"<br>");//순서가 0번부터
+        //특정위치의 문자 여러개 추출하기 substr(시작위치,개수)
+        
+        //4번째부터 4글자를 추출
+        document.write("4번째부터 4글자 :"+str.substr(4,4),"<br>");
+        //substring(시작위치,끝위치)
+        //4번째부터 8번째까지
+        document.write("4번째부터 8번째 :" +str.substring(4,8),"<br>");//8-1까지
+       
+        //특정한 문자가 들어있는 위치값
+        //indexOf가 가장 중요함 여기서- 나중에 모바일과 pc홈페이지 주소 관련배움
+        //a (있는거) -  위치값 뜬다
+        document.write("a:"+str.indexOf("a"),"<br>");//a가 중복되어도 맨앞만 추출
+        //z (없는거)
+        document.write("z:"+str.indexOf("z"),"<br>");//-1이라고 뜸 없는거
+        
+        //뒤에서부터 특정한 문자가 들어있는 위치값
+        document.write("a:"+str.lastIndexOf("a"),"<br>");
+
+        //e와 일치하는 요소가 있는 찾기-별로중요치않음
+        //값 match 
+        document.write("a:"+str.match("a"),"<br>"); //a:a a가 있다
+        document.write("z:"+str.match("z"),"<br>");//z:null z가 없다
+        //위치 search -indexOf와 비슷
+        document.write(str.search("a"),"<br>");//위치5
+        document.write(str.search("z"),"<br>");//없으므로 -1
+
+        //replace
+        //문자열을 변경할때 그러나, 원본이 바뀌지는 않음
+        document.write(str.replace("javascript","jQuery"),"<br>");
+
+        document.write(str,"<br>");
+
+        //속성 중에 문자길이
+        document.write(str.length,"<br>");
+
+        //공백을 기준으로 단어를 분리
+        var sp= str.split(" ");
+        document.write(sp[0],"<br>");
+        document.write(sp[1],"<br>");
+        document.write(sp[2],"<br>");
+
+        //문자의 0번째 들어있는 글자의 코드값 알아내기
+        //A 65~ Z 90
+        //a 97
+        document.write(str.charCodeAt(0),"<br>");
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

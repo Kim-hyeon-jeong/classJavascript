@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //이름 입력받기
+        var userName= prompt("당신의 이름을 영문자로 입력하세요","");
+        //이름을 모두 대문자로 변경하여 출력하기
+        document.write(userName.toUpperCase(),"<br>");
+
+        //전화번호 입력하기
+        var userTel=prompt("전화번호를 -없이 입력하세요","");
+        //입력한 전화번호의 뒤의 4글자를 제외한 나머지를 보여주고 4글자는
+        //****로 대체하기
+        // 021231234 => 02123**** 9 -4 =>5
+        // 0701231234=> 070123**** 10 -4 =>6
+        // 01012341234=> 0101234**** 11 -4 =>7
+        var newTel =userTel.substr(0,userTel.length-4)+"****";
+
+        document.write("당신의 전화번호는 : "+newTel);
+
+      
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //경고창 alert - 설문을 시작하겠습니까??? - 확인만 있는 창
+        window.alert("설문을 시작합니다~~~");
+        //1. prompt 나이를 입력받아서 
+        var userAge = window.prompt("당신의 나이를 입력하세요","");
+        //2. 입력한 나이가 맞는지를 체크하기 - 확인(true), 취소(false)버튼이 있는 창
+        var ok = window.confirm("입력한 나이가 정말 맞나요???")
+        console.log(ok);
+        //20살 이상이면 설문 참여가 가능합니다~ 그 이하면 설문참여가 불가능합니다
+        if(ok){
+            if(userAge>=20){
+                document.write("설문참여 가능합니다");
+            }else{
+                document.write("설문참여 불가능합니다");
+            }
+        }
+        else{
+            document.write("설문조사를 다시 시작하세요");
+        }
+        //나이가 틀리면 다시 설문에 참여하세요~
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

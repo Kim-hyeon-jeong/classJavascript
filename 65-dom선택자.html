@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function(){ //모든내용 불러와라
+            //h1을 선택하여 글자색 변경
+            var hTitle = document.getElementsByTagName("h1")[0];//인덱스처리를 해서 배열형태로 h1이 모두 있는것중 일부를 선택하기
+            console.log(hTitle); //인덱스안하면 배열형태로 모든 h1이 선택된다
+            hTitle.style.color = "green";
+
+            //p를 선택하여 배경색 주기(2가지 방식)
+            //옛날버전
+            // var pText = document.getElementsByTagName("p")[0];//정확하게 인덱스(방번호)지정해줘야함
+            // pText.style.backgroundColor = "pink";
+
+            //요즘버전
+            var pText = document.querySelector("p");
+            pText.style.backgroundColor = "pink"; //인덱스 써주지 않았는데도 첫번째가 칠해짐
+
+            //클래스 글자크기 50
+            // var cText = document.getElementsByClassName("text")[0];
+            var cText = document.querySelector(".text"); //태그인지 클래스인지 아이디인지 모르므로 꼭 .을 찍자
+            cText.style.fontSize="50px";
+
+            //아이디 선택자 밑줄(2가지 방식)
+            //옛날방식
+            // var idText = document.getElementById("idText");
+            // idText.style.textDecoration = "underline";
+
+            //요즘방식
+            var idText = document.querySelector("#idText");
+            idText.style["text-decoration"]="underline";
+
+            //form선택자
+            document.myForm.uIdname.style.backgroundColor="#ccc";
+
+        }
+    </script>
+</head>
+<body>
+    <h1>dom 선택자</h1>
+    <p>태그선택자</p>
+    <p class="text">클래스 선택자</p>
+    <p id="idText">아이디 선택자</p>
+    <form name="myForm">
+        <label for="uId">아이디</label>
+        <input type="text" id="uId" name="uIdname">
+    </form>
+    <h1>제일 큰 제목</h1>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var i=1;
+        var timer = setInterval("console.log(i++)",1000);//밀리세크단위라서 1초는 1000
+        //setInterval을 중지시키려면 변수에 넣어놓아야 clearInterval로 중지가능하다
+    </script>
+</head>
+<body>
+    <button onclick="timer=setInterval('console.log(i++)',1000)">play</button> 
+    <!-- 이어서 재시작, 쌍따움표 안에는 외따움표 -->
+    <!-- onclick은 이벤트생성 -->
+    <button onclick="clearInterval(timer)">stop</button>
+    
+</body>
+</html>
